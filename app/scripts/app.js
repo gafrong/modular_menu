@@ -24,11 +24,22 @@ angular.module('app', [
       })
       .state('index.profile.section-one', {
         url: '/one',
-        templateUrl: 'views/profile.partial/_section-one.html'
+        views: {
+          "viewA": {
+            templateUrl: 'views/profile.partial/_section-one.html'
+          },
+          "viewB": {
+            templateUrl: 'views/profile.partial/_section-two.html'
+          }
+        }
       })
       .state('index.profile.section-two', {
         url: '/two',
-        templateUrl: 'views/profile.partial/_section-two.html'
+        views: {
+          "viewB": {
+            templateUrl: 'views/profile.partial/_section-two.html'
+          }
+        }
       })
       .state('index.account', {
         url: '/account',
